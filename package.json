@@ -1,0 +1,23 @@
+{
+  "name": "stocks",
+  "version": "1.0.0",
+  "description": "Project for Nashville Software School node.js back-end course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanBaldwin/stocks.git"
+  },
+  "author": "Nathan Baldwin <nathansbaldwin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanBaldwin/stocks/issues"
+  },
+  "homepage": "https://github.com/NathanBaldwin/stocks#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
