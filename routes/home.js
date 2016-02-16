@@ -10,8 +10,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  homeCtrl.getStock();
-  res.render('requestedQuote');
+  //retrieving user's requested stock symbol from form:
+  let symbol = req.body.stockSymbol;
+
+  //invoke method on homeCtrl to make api call, passing user's specified symbol:
+  homeCtrl.getStock(symbol, res);
 })
 
 module.exports = router;
