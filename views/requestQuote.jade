@@ -1,0 +1,9 @@
+extends ./layout.jade
+block title
+block content
+
+  h1 Request Quote Page
+
+  form(method='post', enctype='multipart/form-data')
+    input(type='file', name='image' accept='image/*')
+    input(type='submit', value='Share your photo!')
