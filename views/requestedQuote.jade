@@ -1,0 +1,11 @@
+extends ./layout.jade
+block title
+block content
+
+  h1 Here is Your Quote:
+
+  form(method='POST')
+    .form-group
+      label Message
+      input(type='subtextarea', name='message', placeholder='Message')
+      input(type='submit', value='Contact Us')

@@ -8,15 +8,14 @@ const app = express(); //what is happening here?
 const PORT = process.env.PORT || 3000;
 
 //link to routes module:
-const routes = require('./routes/')
+const routes = require('./routes/');
 
 //configure express to use jade:
 app.set('view engine', 'jade');
 
+//middleware:
 
-app.get('/requestQuote', (req, res) => {
-  res.render('requestQuote');
-})
+app.use(routes);
 
 app.listen(PORT, () => {
     console.log(`Node.js server started. Listening on port ${PORT}`);

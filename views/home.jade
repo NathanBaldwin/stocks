@@ -1,0 +1,12 @@
+extends ./layout.jade
+block title
+block content
+
+  h1 Request Quote Page
+
+  form(method='post', enctype='multipart/form-data')
+    .form-group
+      label Stock:
+      input(type='text', name='stock-symbol', placeholder='enter symbol')
+    .form-group
+      input(type='submit', value='Get Quote')
