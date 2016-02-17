@@ -2,6 +2,7 @@
 
 const express = require('express');
 const request = require('request');
+const homeMod = require('../models/home.js');
 
 module.exports.getStock = (symbol, res) => {
    console.log("I see the getStock controller!");
@@ -21,6 +22,14 @@ module.exports.getStock = (symbol, res) => {
     }
 
     console.log("stockData", stockData);
+  
+    const stockQuery = new homeMod.priceQuery(stockData);
+
+    stockQuery.save((err, _stockQuerry) => {
+      if (err) throw err;
+
+      console.log("_stockQuerry", _stockQuerry);
+    });
 
     res.render('requestedQuote', {
       company: stockData.coName,
